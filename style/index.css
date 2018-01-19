@@ -1,0 +1,135 @@
+/* CSS Document */
+#nav{ width:100%; height:40px; border-bottom:2px solid #ff6699; position:relative; z-index:200; background:#fff;}
+#nav .nav{ height:100%;/* background:#FF9966;*/}
+#nav .nav .all_kinds{ width:190px; height:100%; position: relative;/*参照物*/}
+#nav .nav .all_kinds .kinds_bt{ width:100%; height:40px; background:#ed3577; padding-left:32px; font-size:16px; line-height:38px;border-bottom:2px solid #d42e69;}
+#nav .nav .all_kinds .kinds_bt a{ color:#fff; display:block; float:left; }
+#nav .nav .all_kinds .kinds_bt  i{ font-size:22px; color:#fff; display:block;  float:left;margin-right:8px;}
+#nav .nav .all_kinds .kinds_con{ width:190px; height:420px; background:#ff6699; position:absolute; left:0; top:40px;}
+#nav .nav .all_kinds .kinds_con dl{ width:100%; height:84px; border-bottom:1px solid #ff7aab; position: relative;/*参照物*/}
+#nav .nav .all_kinds .kinds_con dl .menu{ width:193px; height:100%; padding:8px 10px 0 10px; position: relative;/*参照物*/ z-index:50;}
+#nav .nav .all_kinds .kinds_con dl .menu h3{ margin-bottom:3px;}
+#nav .nav .all_kinds .kinds_con dl .menu h3 a{color:#fff; font-size:14px; text-decoration:none;}
+#nav .nav .all_kinds .kinds_con dl .menu i{ width:10px; height:10px; display:block; color:#fff; -webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg); -ms-transform:rotate(-90deg); transform:rotate(-90deg); position:absolute; right:10px; top:34px;}
+#nav .nav .all_kinds .kinds_con dl .menu  p{ height:44px; line-height:20px; overflow:hidden;}
+#nav .nav .all_kinds .kinds_con dl .menu  p a{ color:#fff; font-size:12px;text-decoration:none; margin-right:2px; display:inline-block; white-space:nowrap;/*重点*/}
+
+#nav .nav .all_kinds .kinds_con dl:hover .menu{ background:#FFFFFF;}
+#nav .nav .all_kinds .kinds_con dl:hover .menu h3 a{ color:#ff6699;}
+#nav .nav .all_kinds .kinds_con dl:hover .menu  p a{ color:#ff6699;}
+#nav .nav .all_kinds .kinds_con dl:hover .menu i{ color:#ff6699;}
+/*边角的问题*/
+#nav .nav .all_kinds .kinds_con dl .menu:before{ content:''; width:10px; height:84px; background:#ff6699; display:block; position:absolute; left:-10px;top:0; display:none;}
+#nav .nav .all_kinds .kinds_con dl:hover .menu:before{ display:block;}
+
+#nav .nav .all_kinds .kinds_con dl .menu:after{ content:''; width:0; height:0; display:block; border-top:10px solid #7A0E65;border-left:10px solid transparent; position:absolute; left:-10px;bottom:-10px; display:none;}
+#nav .nav .all_kinds .kinds_con dl:hover .menu:after{ display:block;}
+/*子菜单的显示*/
+#nav .nav .all_kinds .kinds_con dl .submenu{ display:none; width:1006px; min-height:300px; background:#FFFFFF; border:1px solid #ff6699; position:absolute; top:-1px; left:191px; z-index:40; padding:12px;/*1-8新增*/}
+#nav .nav .all_kinds .kinds_con dl:hover .submenu{ display:block;}
+
+/*子菜单内容的样式*/
+
+#nav .nav .all_kinds .kinds_con dl .submenu .item{ width:100%;margin-bottom:24px;}
+#nav .nav .all_kinds .kinds_con dl .submenu .item h4{ width:72px; font-size:14px; font-weight:800; float:left;}
+#nav .nav .all_kinds .kinds_con dl .submenu .item h4 a{ color:#ff6699;}
+#nav .nav .all_kinds .kinds_con dl .submenu .item p{ width:900px; line-height:25px; float:left; border-bottom:1px solid #f6f6f6; padding-bottom:6px;}
+#nav .nav .all_kinds .kinds_con dl .submenu .item p a{ padding-left:10px; white-space:nowrap;}
+#nav .nav .all_kinds .kinds_con dl .submenu .item p a:before{ content:"|"; color:#f6f6f6; padding-right:10px; }
+#nav .nav .all_kinds .kinds_con dl .submenu .item p a:hover:before{ text-decoration:none;}
+/*main_nav*/
+#nav .nav  .main_nav{ width:980px; height:100%; line-height:38px; margin-left:30px;}
+#nav .nav  .main_nav li{  float:left; font-size:16px; text-decoration:none; margin:0 1px 0 1px;}
+#nav .nav  .main_nav li a{padding:0  22px; color:#535a60;text-decoration:none;display:block;}
+#nav .nav  .main_nav li.nav_on a{ color:#ff6699;}
+#nav .nav  .main_nav li a:hover{ color:#ff6699;}
+
+/*banner*/
+#banner{ width:100%; height:420px; }
+/* 本例子css */
+		.slideBox{ width:100%; height:420px; overflow:hidden; position:relative;}
+		.slideBox .hd{ height:15px; overflow:hidden;  /*后面是新加的内容*/position:absolute; left:50%; transform:translate(-50%,0); bottom:5px; z-index:1; }
+		.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+		.slideBox .hd ul li{ float:left; margin-right:6px;  width:13px; height:13px; border-radius:50%; line-height:14px; text-align:center; background:#fff; cursor:pointer; font-size:0; }
+		.slideBox .hd ul li.on{ background:#ff6699; color:#fff; }
+		.slideBox .bd{ position:relative; height:100%; z-index:0;  /*后面是新加的内容*/     width:1920px; left:50%; margin-left:-960px;   }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; }
+		.slideBox .bd img{ width:1920px; height:420px; display:block;}
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideBox .prev,
+		.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+		.slideBox .prev:hover,
+		.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+		.slideBox .prevStop{ display:none;  }
+		.slideBox .nextStop{ display:none;  }
+
+/*notice_box*/
+.notice_box{ background:#FF3300; position: relative;/*参照物*/}
+.notice_box .notice{ width:230px; height:402px; background:rgba(255,255,255,0.8); position:absolute; right:0; bottom:10px;/*注意的事项*/ }
+.notice_box .notice h2{ width:100%; height:34px; line-height:34px; font-size:14px; padding:0 12px;}
+.notice_box .notice h2 a{ float:right; font-size:12px;}
+.notice_box .notice  ul{ width:202px; height:158px; margin:0 auto; overflow:hidden;white-space:nowrap;}
+.notice_box .notice  ul li{ line-height:25px; height:25px;  margin-left:20px; list-style-type:disc; /*溢出出现省略号*/}
+
+notice_pic img{ width:100%;}
+
+.notice_box h3{ width:100%; height:32px; background:#686868; text-align:center; line-height:32px;  font-size:14px; position:relative;}
+.notice_box h3 a{color:#fff;}
+.notice_box h3 i{ font-size:16px; margin-right:5px;}
+.notice_box h3 .submenu{ display:none; position:absolute; left:0; top:32px;}
+.notice_box h3:hover .submenu{ display:block; border: background:rgba(255,255,255,1); width:100%;}
+.notice_box h3:hover .submenu img{ margin:0 auto; width:100%;}
+.notice_box h3:hover a{ text-decoration:none;}
+
+/*hot_brand*/
+#hot_brand{ width:100%; margin-top:25px;}
+#hot_brand .hot_brand{ width:1201px; }
+#hot_brand .hot_brand .brand_tit{ width:100%;height:28px; color:#666666; font-size:20px; font-weight:800; position: relative; padding-left:10px;margin-bottom:10px;}
+#hot_brand .hot_brand .brand_tit span{ color:#84af9b;  font-weight:200; margin-left:16px; font-size:18px;}
+#hot_brand .hot_brand .brand_tit:before{ content:''; width:4px; height:28px; background:#84af9b; display:block; overflow:hidden; position:absolute; left:0; top:0;}
+
+
+#hot_brand .hot_brand .brand_con{ width:100%; height: auto; background:#fff; border-top:1px solid #dbdbdb;border-left:1px solid #dbdbdb;/*注意解决问题的方法*/}
+#hot_brand .hot_brand .brand_con li{ width:240px; height:416px; float:left; border-bottom:1px solid #dbdbdb;border-right:1px solid #dbdbdb; position:relative; }
+#hot_brand .hot_brand .brand_con li a{ width:100%; height:100%; display:block;}
+#hot_brand .hot_brand .brand_con li a .pic_box{ width:100%; height:295px; overflow:hidden;}
+#hot_brand .hot_brand .brand_con li a .pic_box img{ width:100%; transition:all 1s ease-in;}
+#hot_brand .hot_brand .brand_con li a .pic_logo{ background:url(../images/hbg.png) no-repeat top  center; width:104px; height:93px; position:absolute; left:50%; transform:translateX(-50%); top:248px;}
+#hot_brand .hot_brand .brand_con li a .pic_logo img{ width:70px; margin:0 auto; display:block; margin-top:32px;}
+#hot_brand .hot_brand .brand_con li a .text{ text-align:center; margin-top:56px;}
+#hot_brand .hot_brand .brand_con li a .text h3{ font-size:16px; color:#333333;}
+#hot_brand .hot_brand .brand_con li a .text p{ font-size:14px; margin-top:5px;}
+
+#hot_brand .hot_brand .brand_con li:hover a .pic_box img{ transform:scale(1.1);}
+#hot_brand .hot_brand .brand_con li a:hover{ text-decoration:none;}
+
+#hot_brand .hot_brand .brand_con li a .text_more{ width:130px; height:34px; border-radius:20px; background:#333333; text-align:center; line-height:34px; margin:0 auto; color:#fff; margin-top:49px; transition:all 1s ease;}
+#hot_brand .hot_brand .brand_con li:hover a .text_more{ background:#ff6699;}
+
+
+
+/*hot_recommand*/
+#hot_recommand{ width:100%; margin-top:25px;}
+#hot_recommand .hot_recommand{ width:1201px; }
+#hot_recommand .hot_recommand .recommand_tit{ width:100%;height:28px; color:#666666; font-size:20px; font-weight:800; position: relative; padding-left:10px;margin-bottom:10px;}
+#hot_recommand .hot_recommand .recommand_tit span{ color:#e1453f;  font-weight:200; margin-left:16px; font-size:18px;}
+#hot_recommand .hot_recommand .recommand_tit:before{ content:''; width:4px; height:28px; background:#e1453f; display:block; overflow:hidden; position:absolute; left:0; top:0;}
+
+
+#hot_recommand .hot_recommand .recommand_con{ width:100%; height: auto; background:#fff; border-top:1px solid #dbdbdb;border-left:1px solid #dbdbdb;/*注意解决问题的方法*/}
+#hot_recommand .hot_recommand .recommand_con li{ width:200px; height:280px; float:left; border-bottom:1px solid #dbdbdb;border-right:1px solid #dbdbdb; position:relative; }
+#hot_recommand .hot_recommand .recommand_con li a{ width:100%; height:100%; display:block;}
+#hot_recommand .hot_recommand .recommand_con li a .pic_box{ width:100%; height:200px; overflow:hidden;}
+#hot_recommand .hot_recommand .recommand_con li a .pic_box img{ height:200px;}
+#hot_recommand .hot_recommand .recommand_con li a .text{ margin-top:10px; padding:0 20px;}
+#hot_recommand .hot_recommand .recommand_con li a .text h3{ font-size:12px; color:#333333; height:35px; overflow:hidden; line-height:20px; }
+#hot_recommand .hot_recommand .recommand_con li a .text p{ font-size:16px; margin-top:5px; color:#e1453f;}
+#hot_recommand .hot_recommand .recommand_con li a .text p em{ font-size:12px;}
+#hot_recommand .hot_recommand .recommand_con li a .text p i{ font-size:12px;}
+#hot_recommand .hot_recommand .recommand_con li:hover a .pic_box img{ transform:translateX(-5px);}
+#hot_recommand .hot_recommand .recommand_con li a:hover{ text-decoration:none;}
+
+
+#hot_recommand .hot_recommand .recommand_con li:hover{/* border:1px solid red;*/ box-shadow:0 2px 10px #333333; position:relative; z-index:10;}

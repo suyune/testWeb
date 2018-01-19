@@ -1,0 +1,99 @@
+/* CSS Document */
+*,:before,:after{ margin:0; padding:0; box-sizing:border-box;}
+html,body,div,p,ul,li,ol,dl,dt,dd,a,img,b,i,em,strong,span,h1,h2,h3,h4,h5,h6,form,input,select,label,textarea,button,fieldset,legend,optgroup,blockquot,sub,sup,pre,table,tr,td,th,tbody,thead,tfoot,u,s,caption,nav,header,article,section,footer,aside,figure,figcaption,audio,video,source{ margin:0; padding:0;}
+
+h1,h2,h3,h4,h5,h6,em,i,strong,b{ font-weight:normal; font-style:normal;font-size:100%;}
+
+ul,ol,li{ list-style:none;}
+
+fieldset,img{ border:0 none;vertical-align: middle;/*垂直居中*/}
+table{ border-collapse:collapse;/*边线重叠*/ border-spacing:0;}
+input, select, textarea { font: 12px/20px  Arial, "微软雅黑";}
+
+input,button,select,textarea{ outline:none}
+:foucs{ outline:none;}/*表单获得焦点，去掉蓝色框线*/
+
+/*超链接*/
+a { color: #555555; text-decoration: none; }
+a:link, a:visited{ color: #555555; text-decoration: none;}
+a:hover { color: #f69; text-decoration: underline;}
+a:active { text-decoration: none;}
+
+
+/* Clearfix,避免因子元素浮动而导致的父元素高度缺失能问题 */
+.clearfix:after{ content:''; clear:both; height:0; display:block; line-height:0;  font-size:0; visibility:hidden;}
+.clear{ zoom:1;}/*触发ie6 的after的属性*/
+
+/*文字方面*/
+.fl{ float:left;}
+.fr{ float:right;}
+
+body { font-family:"微软雅黑", Arial; font-size:12px; color: #666; min-width: 1200px;/*最小宽度1200px*/ background:#f5f5f5;}
+.wrap{ width:1200px; margin:0 auto;}/*版心*/
+
+
+@font-face {
+  font-family: 'iconfont';  /* project id 526998 */
+  src: url('http://at.alicdn.com/t/font_526998_y8c3468f01azia4i.eot');
+  src: url('http://at.alicdn.com/t/font_526998_y8c3468f01azia4i.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_526998_y8c3468f01azia4i.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_526998_y8c3468f01azia4i.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_526998_y8c3468f01azia4i.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*topbar style*/
+#topbar{ width:100%; height:30px; background:#fafafa; border-bottom:1px solid #f6f6f6; position:relative; z-index:100;}
+#topbar .topbar{ height:100%; }
+#topbar .topbar .login_box{ width:270px; height:100%;line-height:30px;} 
+#topbar .topbar .login_box p{ float:left;}
+#topbar .topbar .login_box a{ float:left; margin-left:14px;}
+#topbar .topbar .quick_menu{ width:370px; height:100%;  line-height:30px;}
+#topbar .topbar .quick_menu li{  float:left; position:relative;/*参照物*/}
+#topbar .topbar .quick_menu li >a{ height:31px;/*注意*/  display:block;padding:0 10px; border:1px solid transparent; border-bottom:0 none; _float:left;/*兼容ie6*/ position:relative; z-index:10;}
+#topbar .topbar .quick_menu li a span{ float:left;}
+#topbar .topbar .quick_menu li a i{ float:left; transition:all 0.5s ease;/*1-8新增*/}
+
+#topbar .topbar .quick_menu li .submenu{ width:100%; border:1px solid  #f6f6f6;  position:absolute; left:0; top:29px; padding:5px 0 5px 10px; z-index:9; display:none; background:#fff;}
+#topbar .topbar .quick_menu li .submenu a{ display:block; line-height:25px;}
+#topbar .topbar .quick_menu li:hover .submenu{ display:block;}
+#topbar .topbar .quick_menu li:hover >a{background:#FFFFFF;border:1px solid #f6f6f6; border-bottom:0 none;}
+/*右边加竖线的方法*/
+#topbar .topbar .quick_menu li+li:before{ content:''; width:1px; height:16px; overflow:hidden; display:block; background:#999; position:absolute; left:0px; top:8px; z-index:50;}
+
+
+#topbar .topbar .quick_menu li:hover a i{ transform:rotate(180deg);/*1-8新增*/}
+/*header style*/
+
+#header{ width:100%; height:143px; background:#fff; }
+#header .header{ height:100%; }
+#header .header .logo{width:172px; height:143px; }
+#header .header .logo a{ width:100%; height:100%; display:block; padding-top:20px;}
+#header .header .logo a img{ height:110px; width:auto;}
+
+#header .header .search_box{width:606px; height:143px; margin-left:117px; padding-top:47px;}
+#header .header .search_box form{ width:606px; height:44px; background:#ff6699; padding:3px 0 0 3px; position:relative;/*参照物*/}
+#header .header .search_box form input[type="text"]{ width:500px; height:38px; line-height:38px;/*注意事项*/ background:#FFFFFF; border:0 none; padding-left:30px; color:#a9a9a9; float:left;}
+#header .header .search_box form input[type="submit"]{ width:102px; height:38px; background:transparent; border:0 none; float:left; color:#fff; font-size:16px; letter-spacing:5px; cursor:pointer;/*鼠标的指针*/}
+#header .header .search_box form i{ width:20px; height:20px; display:block; position:absolute; left:10px; top:8px; font-size:20px;color:#a9a9a9;}
+#header .header .search_box p{ margin-top:5px; margin-left:10px;}
+#header .header .search_box a{ margin-right:5px;}
+
+#header .header .small_car{width:190px; height:143px; padding-top:48px; position:relative;/*参照物*/}
+#header .header .small_car h2{ width:100%; height:38px; border:1px solid #e5e5e5; font-size:16px; text-align:center; line-height:38px;position:relative;/*参照物*/ z-index:10; background:#FFFFFF;}
+#header .header .small_car h2 i{ width:20px; height:20px; font-size:20px; display:inline-block; margin-right:10px;}
+#header .header .small_car h2 b{ width:18px; height:18px; display:block; background:#ff6699; border-radius:50%; color:#fff; font-size:14px; text-align:center; line-height:18px; position:absolute; top:0; right:28px;}
+
+#header .header .small_car .car_con{ width:305px; min-height:100px; border:1px solid #e5e5e5; background:#FFFFFF; position:absolute; right:0; top:84px; z-index:9; display:none;}
+
+#header .header .small_car:hover h2{border:1px solid #e5e5e5; border-bottom:0 none;}
+#header .header .small_car:hover .car_con{ display:block; text-align:center; padding:10px;}
+#header .header .small_car:hover .car_con p{ margin:8px 0;}
+#header .header .small_car:hover .car_con a{ color:#ff6699;}
+
+
